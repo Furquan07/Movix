@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useRef } from "react";
 import {
     BsFillArrowLeftCircleFill,
@@ -114,5 +115,12 @@ const Carousel = ({ data, loading, endpoint, title }) => {
         </div>
     );
 };
+
+Carousel.propTypes = {
+    data: PropTypes.any,
+    loading:PropTypes.any,
+    title:PropTypes.any,
+    endpoint:PropTypes.any,
+  };
 
 export default Carousel;

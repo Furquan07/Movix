@@ -1,10 +1,10 @@
 //import React from "react";
-
+import PropTypes from 'prop-types';
 import Carousel from "../../../components/carousel/Carousel";
 import useFetch from "../../../hooks/useFetch";
 
 const Recommendation = ({ mediaType, id }) => {
-    const { data, loading, error } = useFetch(
+    const { data, loading} = useFetch(
         `/${mediaType}/${id}/recommendations`
     );
 
@@ -17,5 +17,10 @@ const Recommendation = ({ mediaType, id }) => {
         />
     );
 };
+
+Recommendation.propTypes = {
+    mediaType: PropTypes.any,
+    id:PropTypes.any,
+  };
 
 export default Recommendation;

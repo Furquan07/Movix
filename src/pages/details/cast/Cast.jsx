@@ -1,4 +1,5 @@
-import React from "react";
+//import React from "react";
+import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
 import "./style.scss";
@@ -56,5 +57,10 @@ const Cast = ({ data, loading }) => {
         </div>
     );
 };
+
+Cast.propTypes = {
+    data: PropTypes.any,
+    loading:PropTypes.any,
+  };
 
 export default Cast;

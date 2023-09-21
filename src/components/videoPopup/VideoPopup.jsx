@@ -1,6 +1,6 @@
 //import React from "react";
 import ReactPlayer from "react-player/youtube";
-
+import PropTypes from 'prop-types'
 import "./style.scss";
 
 const VideoPopup = ({ show, setShow, videoId, setVideoId }) => {
@@ -26,5 +26,12 @@ const VideoPopup = ({ show, setShow, videoId, setVideoId }) => {
         </div>
     );
 };
+
+VideoPopup.propTypes = {
+    show: PropTypes.any,
+    setShow:PropTypes.any,
+    videoId:PropTypes.any,
+    setVideoId:PropTypes.any,
+  };
 
 export default VideoPopup;

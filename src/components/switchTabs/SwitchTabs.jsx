@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import PropTypes from 'prop-types'
 import "./style.scss";
 
 const SwitchTabs = ({ data, onTabChange }) => {
@@ -33,5 +33,10 @@ const SwitchTabs = ({ data, onTabChange }) => {
         </div>
     );
 };
+
+SwitchTabs.propTypes = {
+    data: PropTypes.any,
+    onTabChange:PropTypes.any,
+  };
 
 export default SwitchTabs;

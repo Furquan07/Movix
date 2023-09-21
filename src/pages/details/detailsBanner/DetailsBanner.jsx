@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
+import PropTypes from 'prop-types';
 
 import "./style.scss";
 
@@ -232,5 +233,10 @@ const DetailsBanner = ({ video, crew }) => {
         </div>
     );
 };
+
+DetailsBanner.propTypes = {
+    video: PropTypes.any,
+    crew:PropTypes.any,
+  };
 
 export default DetailsBanner;

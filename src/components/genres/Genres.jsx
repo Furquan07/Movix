@@ -1,6 +1,6 @@
 //import React from "react";
 import { useSelector } from "react-redux";
-
+import PropTypes from 'prop-types'
 import "./style.scss";
 
 const Genres = ({ data }) => {
@@ -19,5 +19,9 @@ const Genres = ({ data }) => {
         </div>
     );
 };
+
+Genres.propTypes = {
+    data: PropTypes.any,
+  };
 
 export default Genres;

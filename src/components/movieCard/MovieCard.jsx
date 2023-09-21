@@ -2,7 +2,7 @@ import React from "react";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import PropTypes from 'prop-types'
 import "./style.scss";
 import Img from "../lazyLoadImage/Img";
 import CircleRating from "../circleRating/CircleRating";
@@ -40,5 +40,11 @@ const MovieCard = ({ data, fromSearch, mediaType }) => {
         </div>
     );
 };
+
+MovieCard.propTypes = {
+    data: PropTypes.any,
+    fromSearch:PropTypes.any,
+    mediaType:PropTypes.any,
+  };
 
 export default MovieCard;

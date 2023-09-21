@@ -1,4 +1,5 @@
 //import React from "react";
+import PropTypes from 'prop-types'
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -19,5 +20,9 @@ const CircleRating = ({ rating }) => {
         </div>
     );
 };
+
+CircleRating.propTypes = {
+    rating: PropTypes.any,
+  };
 
 export default CircleRating;
